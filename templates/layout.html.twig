@@ -23,6 +23,26 @@
                 font-weight: 200;
                 margin-bottom: 0;
             }
+
+            .scan_form {
+                margin:10px auto;
+                max-width: 400px;
+                padding: 20px 12px 10px 20px;
+                font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            }
+            .scan_form li {
+                padding: 0;
+                display: block;
+                list-style: none;
+                margin: 10px 0 0 0;
+            }
+            .scan_form label{
+                margin:0 0 3px 0;
+                padding:0px;
+                display:block;
+                font-weight: bold;
+            }
+
         </style>
     </head>
     <body>
@@ -31,10 +51,6 @@
     <div>301, 302...whatever it takes.</div>
 
 
+    {% block content %} {% endblock %}
 
-    {{ name }}
-
-
-  </body>
-</html>
-
+    {% include 'footer.html.twig' %}

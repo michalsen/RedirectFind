@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<scan>{{ name }}</strong>
+
+<form class="scan_form" method=POST action="/scan">
+  <label>Site</label><input type="input" name="site" size="60">
+  <input type="submit" name="Submit">
+</form>
+
+{% endblock %}
