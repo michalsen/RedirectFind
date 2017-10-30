@@ -17,7 +17,7 @@ $app->get('/', function ($request, $response, $args) {
 //Home
 $app->get('/scan', function ($request, $response, $args) {
     return $this->view->render($response, 'scan.html.twig', [
-        'name' => 'scan'
+        'name' => 'home'
     ]);
 })->setName('profile');
 
@@ -30,4 +30,10 @@ $app->get('/{name}', function ($request, $response, $args) {
 })->setName('profile');
 
 
-
+// POST to scan
+$app->post('/scan', function($request, $response, $args){
+    $site = $request->getParam('site');
+    return $this->view->render($response, 'scan.html.twig', [
+        'name' => $site
+    ]);
+});
