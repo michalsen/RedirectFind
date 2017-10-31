@@ -4,9 +4,20 @@
 
 <scan>{{ name }}</strong>
 
+
+
+
 <form class="scan_form" method=POST action="/scan">
   <label>Site</label><input type="input" name="site" size="60">
   <input type="submit" name="Submit">
 </form>
+
+
+
+
+{% for site in sites %}
+  {{ site }}<br />
+{% endfor %}
+
 
 {% endblock %}
