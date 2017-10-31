@@ -13,11 +13,8 @@ class DispenseRecord {
 
   public function record($dispense)
   {
-    $record = R::dispense('history');
-    $record->gnl_lead = $dispense[0];
-    $record->sf_lead  = $dispense[1];
-    $record->response = $dispense[2];
-    $record->status   = $dispense[3];
+    $record = R::dispense('site');
+    $record->name = $dispense;
     $record->audit   = date("Y-m-d H:i:s");
     $id = R::store($record);
       return $dispense;

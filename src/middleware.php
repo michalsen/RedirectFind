@@ -17,4 +17,3 @@ $pass = $_ENV['DB_PASS'];
 $db = $_ENV['DB_NAME'];
 R::setup("mysql:host=$host;dbname=$db", $user, $pass);
 
-
