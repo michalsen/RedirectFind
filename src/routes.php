@@ -1,7 +1,5 @@
 <?php
 
-namespace Spatie\Crawler;
-
 use Slim\Http\Request;
 use Slim\Http\Response;
 
