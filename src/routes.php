@@ -1,7 +1,11 @@
 <?php
 
+namespace Spatie\Crawler;
+
 use Slim\Http\Request;
 use Slim\Http\Response;
+
+
 
 require 'models/DispenseRecord.php';
 require 'models/GetList.php';
@@ -21,7 +25,7 @@ $app->post('/scan', function($request, $response, $args){
 });
 
 
-//Home
+// Home
 $app->get('/', function ($request, $response, $args) {
     return $this->view->render($response, 'index.html.twig', [
         'name' => 'home'
@@ -29,7 +33,7 @@ $app->get('/', function ($request, $response, $args) {
 })->setName('profile');
 
 
-//Home
+// Scan
 $app->get('/scan', function ($request, $response, $args) {
     $return = new GetList();
 
