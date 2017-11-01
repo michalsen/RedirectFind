@@ -4,7 +4,6 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 
 
-
 require 'models/DispenseRecord.php';
 require 'models/GetList.php';
 
@@ -34,12 +33,10 @@ $app->get('/', function ($request, $response, $args) {
 // Scan
 $app->get('/scan', function ($request, $response, $args) {
     $return = new GetList();
-
-    return $this->view->render($response, 'scan.html.twig', [
-        'name' => 'home',
-        'sites' => $return->list
-    ]);
-
+        return $this->view->render($response, 'scan.html.twig', [
+            'name' => 'home',
+            'sites' => $return->list
+        ]);
 })->setName('profile');
 
 
